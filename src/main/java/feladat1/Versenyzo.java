@@ -5,6 +5,7 @@ public class Versenyzo {
 	private String name;
 	private String startNum;
 	private int record;
+	private int[] lovesek = new int[5];
 	
 	public Versenyzo(String name, String startNum, int record) {
 		super();
