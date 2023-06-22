@@ -1,6 +1,6 @@
 package feladat1;
 
-public class Versenyzo {
+public class Versenyzo implements IChampionShot {
 
 	private String name;
 	private String startNum;
@@ -23,6 +23,16 @@ public class Versenyzo {
 	}
 	public String getStartNum() {
 		return startNum;
+	}
+	@Override
+	public int loves() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public String rekordEllenorzes(int hanyadikKor) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	
