@@ -7,7 +7,6 @@ public class Versenyzo implements IChampionShot {
 	private int record;
 	
 	public Versenyzo(String name, String startNum, int record) {
-		super();
 		this.name = name;
 		this.startNum = startNum;
 		this.record = record;
