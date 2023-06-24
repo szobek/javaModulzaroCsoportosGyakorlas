@@ -1,6 +1,5 @@
 package feladat1;
 
-import java.util.random.RandomGenerator;
 
 public class Versenyzo implements IChampionShot {
 
@@ -47,6 +46,10 @@ public class Versenyzo implements IChampionShot {
 			eddigiPont += loves;
 		}
 		return eddigiPont;
+		
+	}
+	public void setLovesek(int pont, int index) {
+		lovesek[index]=pont;
 		
 	}
 
