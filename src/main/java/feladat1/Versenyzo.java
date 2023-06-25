@@ -29,6 +29,10 @@ public class Versenyzo implements IChampionShot {
 	public int[] getLovesek() {
 		return lovesek;
 	}
+	public int getEgyLoves(int index) {
+		return lovesek[index];
+	}
+
 	@Override
 	public int loves() {
 		// TODO Auto-generated method stub
@@ -36,8 +40,15 @@ public class Versenyzo implements IChampionShot {
 	}
 	@Override
 	public String rekordEllenorzes(int hanyadikKor) {
-		// TODO Auto-generated method stub
-		return null;
+
+		String eredmeny;
+		if (countAllPoints()>record) {
+			eredmeny = "új egyéni rekord";
+		} else if (countAllPoints()+100*(5-(hanyadikKor+1))>record) {
+			eredmeny = "még dönthet rekordot";
+		} else eredmeny = "már maxponttal sem dönthet rekordot";
+		
+		return eredmeny;
 	}
 	
 	public int countAllPoints() {

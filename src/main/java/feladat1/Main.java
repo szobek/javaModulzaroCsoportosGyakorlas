@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		List<Versenyzo> champions = new ArrayList<Versenyzo>();
 		champions.add(new Versenyzo("Franciska", "v0001", 467));
