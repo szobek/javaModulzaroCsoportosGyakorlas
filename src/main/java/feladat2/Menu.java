@@ -35,6 +35,9 @@ public class Menu {
 							JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, valaszok,
 							valaszok[1]) == JOptionPane.YES_OPTION) {
 						// TODO ide kell a napi kimutatás kiírása
+						
+						// json napi riport
+						//FileHandler.reportInJSON(null); <- null helyett az ingatlan lista
 
 					}
 				}
