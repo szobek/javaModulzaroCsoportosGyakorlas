@@ -31,7 +31,7 @@ public class Winner {
 					// utolsó kör és rekord, mert korábban beírt rekord hibát okoz
 
 					champions.get(j).setRecord(champions.get(j).countAllPoints());
-
+FileHamdler.writeFileWithCahmpions(champions);
 				}
 			}
 		}
