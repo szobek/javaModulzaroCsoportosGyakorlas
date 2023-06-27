@@ -12,7 +12,7 @@ public class Main {
 
 	private void start() {
 		fillMap();
-		Menu.showMenu();
+		Menu.showMenu(ingatlanok);
 	}
 
 	private void fillMap() {
