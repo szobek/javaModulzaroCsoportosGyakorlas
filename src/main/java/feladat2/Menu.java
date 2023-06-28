@@ -46,6 +46,7 @@ public class Menu {
 						}
 					}
 				}
+				default -> System.out.println("\n nincs ilyen menü! \n");
 				}
 			}
 		} catch (HeadlessException e) {
@@ -63,12 +64,13 @@ public class Menu {
 	}
 
 	private static void searchByParcelNumber(Map<String, Ingatlan> ingatlanok,Scanner sc) {
-		Ingatlan ingatlan = ingatlanok.get(SearchData.searchByParcelNumber(sc));
-		if(ingatlan!=null) {
-			System.out.println(ingatlan.toString());
-		}else {
-			System.out.println("Nincs ilyen ingatlan \n\n");
+		String pn = SearchData.searchByParcelNumber(sc,ingatlanok);
+		Ingatlan ingatlan;
+		if(pn!=null) {
+			 ingatlan = ingatlanok.get(pn);
+			 System.out.println(ingatlan.toString());
 		}
+			
 		
 	}
 

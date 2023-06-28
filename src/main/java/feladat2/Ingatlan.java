@@ -11,6 +11,13 @@ public class Ingatlan {
 		this.alapterulet = alapterulet;
 		this.becsultErtek = becsultErtek;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Ingatlan [tulajdonos=" + tulajdonos + ", alapterulet=" + alapterulet + ", becsultErtek=" + becsultErtek
+				+ "]";
+	}
 	
 	
 }
