@@ -11,6 +11,29 @@ public class Ingatlan {
 		this.alapterulet = alapterulet;
 		this.becsultErtek = becsultErtek;
 	}
+	
+	
+
+
+	public String getTulajdonos() {
+		return tulajdonos;
+	}
+
+
+
+
+	public int getAlapterulet() {
+		return alapterulet;
+	}
+
+
+
+
+	public int getBecsultErtek() {
+		return becsultErtek;
+	}
+
+
 
 
 	@Override
