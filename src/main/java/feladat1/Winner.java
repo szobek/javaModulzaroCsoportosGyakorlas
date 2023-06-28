@@ -27,7 +27,7 @@ public class Winner {
 
 			aktualResults(champions, i);
 			for (int j = 0; j < 5; j++) {
-				if ((i + 1 == 5) && champions.get(j).rekordEllenorzes(i).equals("új egyéni rekord")) { 
+				if ((i + 1 == 5) && champions.get(j).rekordEllenorzes(i).equals("új egyéni rekord")) {
 					// utolsó kör és rekord, mert korábban beírt rekord hibát okoz
 
 					champions.get(j).setRecord(champions.get(j).countAllPoints());
@@ -36,8 +36,15 @@ FileHamdler.writeFileWithCahmpions(champions);
 			}
 		}
 		Versenyzo winner = champions.stream().max(Comparator.comparingInt(Versenyzo::countAllPoints)).get();
+		String vanMegNyertes="";
+		
+		for (int j = 0; j < 5; j++) {
+			if ((winner.countAllPoints()==champions.get(j).countAllPoints()) && !(winner.getName().equals(champions.get(j).getName()))) {
+				vanMegNyertes += " és "+champions.get(j).getName()+" "+champions.get(j).countAllPoints();
+			}
+		}
 
-		System.out.println("\nA győztes nem más mint " + winner.getName() + " " + winner.countAllPoints());
+		System.out.println("\nA győztes nem más mint " + winner.getName() + " " + winner.countAllPoints() + vanMegNyertes);
 
 	}
 
