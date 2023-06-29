@@ -1,6 +1,7 @@
 package feladat2;
 
 import java.awt.HeadlessException;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -9,7 +10,7 @@ import javax.swing.JOptionPane;
 public class Menu {
 	
 
-	public static void showMenu(Map<String, Ingatlan> ingatlanok) {
+	public static void showMenu(List<Ingatlan> ingatlanok) {
 		try (Scanner sc = new Scanner(System.in)) {
 			String menuItem = "";
 
@@ -63,12 +64,14 @@ public class Menu {
 		// TODO Auto-generated method stub
 	}
 
-	private static void searchByParcelNumber(Map<String, Ingatlan> ingatlanok,Scanner sc) {
-		String pn = SearchData.searchByParcelNumber(sc,ingatlanok);
+	private static void searchByParcelNumber(List<Ingatlan> ingatlanok,Scanner sc) {
+		int ingatlanIndex = SearchData.searchByParcelNumber(sc,ingatlanok);
 		Ingatlan ingatlan;
-		if(pn!=null) {
-			 ingatlan = ingatlanok.get(pn);
-			 System.out.println(ingatlan.toString());
+		if(ingatlanIndex>-1) {
+			 ingatlan = ingatlanok.get(ingatlanIndex);
+			 System.out.println("\n"+ingatlan.toString()+"\n");
+		} else {
+			System.out.println("\n Nincs ilyen ingatlan \n");
 		}
 			
 		
