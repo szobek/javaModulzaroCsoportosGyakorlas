@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 public class DBHandler {
 	private static String dbName = "ingatlan_db";
@@ -29,13 +30,15 @@ public class DBHandler {
 		}
 		
 	}
-	public static void getAll() {
+	public static void getAll(List<Ingatlan> ingatlanok) {
 		connect();
 		sql = "Select * from ingatlanok";
 		try {
 			 ps =  connection.prepareStatement(sql);
 			 	ResultSet rs = ps.executeQuery();
-			 	
+			 	while(rs.next()) {
+			 		ingatlanok.add(new Ingatlan(rs.getString("tulajdonos"),rs.getInt("alapterulet"),rs.getInt( "becsult_ertek"),rs.getString("helyrajzi_szam")));
+			 	}
 			 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
