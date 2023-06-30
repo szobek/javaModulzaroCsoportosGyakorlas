@@ -10,7 +10,7 @@ import java.util.List;
 public class DBHandler {
 	private static String dbName = "ingatlan_db";
 	private static String dbUser = "root";
-	private static String dbPassword = "Ruander2023";
+	private static String dbPassword = "";
 	private static String dbPort = "3306";
 	private static String dbUrl = "localhost";
 
