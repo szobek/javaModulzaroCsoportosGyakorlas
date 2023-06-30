@@ -47,4 +47,46 @@ public class DBHandler {
 		
 		
 	}
+	
+	public static void removeByParcelNumber(String helyrajziSzam) {
+		connect();
+		sql = "DELETE FROM ingatlanok WHERE helyrajzi_szam=?";
+		try {
+			 ps =  connection.prepareStatement(sql);
+				ps.setString(1, helyrajziSzam);
+				
+				int deletedRowsNumber = ps.executeUpdate();
+				 System.out.println(deletedRowsNumber+" db sor lett törölve.");		
+
+			 
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		
+	}
+
+	public static void modifyPriceByParcelNumber(String helyrajziSzam, int newPriceOfHouse) {
+		// TODO Auto-generated method stub
+		connect();
+		sql = "UPDATE ingatlanok SET becsult_ertek=? WHERE helyrajzi_szam=?";
+		try {
+
+
+			ps =  connection.prepareStatement(sql);
+			ps.setInt(1, newPriceOfHouse);
+			ps.setString(2, helyrajziSzam);
+				
+				int deletedRowsNumber = ps.executeUpdate();
+				 System.out.println(deletedRowsNumber+" db sor lett módosítva.");		
+
+			 
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	
+	}
 }

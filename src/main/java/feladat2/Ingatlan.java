@@ -41,6 +41,13 @@ public class Ingatlan {
 
 
 
+	public void setBecsultErtek(int becsultErtek) {
+		this.becsultErtek = becsultErtek;
+	}
+
+
+
+
 	public String getHelyrajziSzam() {
 		return helyrajziSzam;
 	}
