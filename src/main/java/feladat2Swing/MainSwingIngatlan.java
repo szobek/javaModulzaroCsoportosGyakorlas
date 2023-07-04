@@ -1,4 +1,4 @@
-package feladat2;
+package feladat2Swing;
 
 import java.awt.EventQueue;
 
@@ -19,6 +19,11 @@ import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableModel;
+
+import feladat2.DBHandler;
+import feladat2.FileHandler;
+import feladat2.Ingatlan;
+
 import javax.swing.JScrollPane;
 
 public class MainSwingIngatlan {

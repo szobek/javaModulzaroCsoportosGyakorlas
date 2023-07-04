@@ -1,9 +1,11 @@
-package feladat2;
+package feladat2Swing;
 
 import java.util.List;
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
+
+import feladat2.Ingatlan;
 
 public class SwingMethods {
 	
