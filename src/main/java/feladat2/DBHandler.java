@@ -10,7 +10,7 @@ import java.util.List;
 public class DBHandler {
 	private static String dbName = "ingatlan_db";
 	private static String dbUser = "root";
-	private static String dbPassword = "";
+	private static String dbPassword = "Ruander2023";
 	private static String dbPort = "3306";
 	private static String dbUrl = "localhost";
 
@@ -56,7 +56,7 @@ public class DBHandler {
 				ps.setString(1, helyrajziSzam);
 				
 				int deletedRowsNumber = ps.executeUpdate();
-				 System.out.println(deletedRowsNumber+" db sor lett törölve.");		
+		//		 System.out.println(deletedRowsNumber+" db sor lett törölve.");		
 
 			 
 		} catch (SQLException e) {
@@ -79,7 +79,7 @@ public class DBHandler {
 			ps.setString(2, helyrajziSzam);
 				
 				int deletedRowsNumber = ps.executeUpdate();
-				 System.out.println(deletedRowsNumber+" db sor lett módosítva.");		
+			//	 System.out.println(deletedRowsNumber+" db sor lett módosítva.");		
 
 			 
 		} catch (SQLException e) {
